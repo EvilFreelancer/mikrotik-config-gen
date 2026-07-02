@@ -1,0 +1,21 @@
+{
+  "name": "mikrotik-config-gen",
+  "owner": {
+    "name": "Pavel Rykov",
+    "email": "paul@drteam.rocks"
+  },
+  "metadata": {
+    "description": "Generate and harden MikroTik RouterOS v7 configurations from a plain-language description or an existing /export.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "mikrotik-config-gen",
+      "source": "./",
+      "description": "Generate secure MikroTik RouterOS v7 configs from plain language, or review and harden an existing /export. Hardening baseline, four presets, per-model device reference, offline validator.",
+      "version": "0.1.0",
+      "category": "networking",
+      "license": "MIT"
+    }
+  ]
+}

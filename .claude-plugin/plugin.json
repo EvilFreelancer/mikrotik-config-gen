@@ -1,0 +1,25 @@
+{
+  "name": "mikrotik-config-gen",
+  "description": "Generate secure MikroTik RouterOS v7 configs from plain language, or review and harden an existing /export. Ships a hardening baseline, four presets (ISP edge, PPPoE+RADIUS BNG, site-to-site WireGuard, hotspot), a per-model device port reference, and an offline validator.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Pavel Rykov",
+    "email": "paul@drteam.rocks",
+    "url": "https://t.me/evilfreelancer"
+  },
+  "homepage": "https://github.com/EvilFreelancer/mikrotik-config-gen",
+  "repository": "https://github.com/EvilFreelancer/mikrotik-config-gen",
+  "license": "MIT",
+  "keywords": [
+    "mikrotik",
+    "routeros",
+    "network",
+    "firewall",
+    "config-generator",
+    "wireguard",
+    "pppoe",
+    "hotspot",
+    "hardening"
+  ],
+  "category": "networking"
+}

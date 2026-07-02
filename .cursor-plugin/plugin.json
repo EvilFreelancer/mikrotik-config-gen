@@ -1,0 +1,22 @@
+{
+  "name": "mikrotik-config-gen",
+  "displayName": "mikrotik-config-gen",
+  "version": "0.1.0",
+  "description": "Generate secure MikroTik RouterOS v7 configs from plain language, or review and harden an existing /export. Hardening baseline, four presets, per-model device reference, offline validator.",
+  "author": {
+    "name": "Pavel Rykov",
+    "email": "paul@drteam.rocks"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mikrotik",
+    "routeros",
+    "network",
+    "firewall",
+    "config-generator",
+    "wireguard",
+    "pppoe",
+    "hotspot",
+    "hardening"
+  ]
+}

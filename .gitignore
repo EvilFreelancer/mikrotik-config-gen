@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.rsc
+!presets/*.rsc
+.DS_Store
