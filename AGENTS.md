@@ -62,7 +62,41 @@ When you change the description or bump the version, update it in **all** of:
 - `.codex-plugin/plugin.json` (both top-level and the `interface` block)
 - `README.md`
 
-Keep the `name` identical everywhere: `mikrotik-config-gen`.
+Keep the `name` identical everywhere: `mikrotik-config-gen`. Inside this repo's own
+`.claude-plugin/marketplace.json` both the plugin `version` and the top-level
+`metadata.version` track this skill, so bump both.
+
+## Publishing: mirror every version bump into the `rpa-skills` catalog
+
+This skill is also published through the
+**[rpa-skills](https://github.com/EvilFreelancer/rpa-skills)** marketplace, which
+keeps its **own copy** of this skill's `version` and `description`. Until the
+catalog is updated, anyone installing from it still gets the old metadata. The
+catalog **follows, never leads** - release here first, then update it in the same
+session. The full process lives in that repo's `AGENTS.md`.
+
+**MANDATORY** whenever `version` or `description` changes here:
+
+1. `.claude-plugin/marketplace.json` (catalog) - in the `mikrotik-config-gen`
+   entry set `version` to the new number and refresh `description` if it changed.
+2. `.agents/plugins/marketplace.json` (catalog, Codex) - no per-plugin `version`
+   there; the entry points at `ref: main`, so the version follows by itself.
+   Refresh `description` if it changed, and the `ref` only when the entry pins a
+   tag or a sha.
+3. Top-level `metadata.version` in **both** catalog manifests - bump the **patch**
+   level on every mirrored skill release (`2.2.0` -> `2.2.1`), and keep the two
+   manifests identical. A skill added, removed, or renamed takes a minor bump
+   instead.
+4. `README.md` (catalog) - the Skills-table row, only when the purpose or the
+   description changed.
+
+Verify from a checkout of the catalog:
+
+```bash
+grep -A3 '"name": "mikrotik-config-gen"' .claude-plugin/marketplace.json
+python3 -m json.tool .claude-plugin/marketplace.json  >/dev/null && echo claude-ok
+python3 -m json.tool .agents/plugins/marketplace.json >/dev/null && echo codex-ok
+```
 
 ## Testing the linter
 
