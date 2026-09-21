@@ -1,6 +1,5 @@
 ---
 name: mikrotik-config-gen
-version: 0.1.0
 description: >
   Generate secure MikroTik RouterOS v7 configurations from a plain-language
   description, or review and harden an existing /export. Use when the user asks
@@ -10,6 +9,7 @@ description: >
   takes per-model port and interface names from devices/, and never invents IPs
   or secrets — it emits clearly marked placeholders plus a fill-in checklist.
 metadata:
+  version: 0.1.0
   author: Pavel Rykov <paul@drteam.rocks>
   homepage: https://github.com/EvilFreelancer/mikrotik-config-gen
   triggers: >
