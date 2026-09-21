@@ -1,6 +1,6 @@
 {
   "name": "mikrotik-config-gen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate secure MikroTik RouterOS v7 configs from plain language, or review and harden an existing /export. Hardening baseline, four presets, per-model device reference, offline validator.",
   "author": {
     "name": "Pavel Rykov",
