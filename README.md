@@ -84,11 +84,11 @@ the repo root):
 
 | Tool          | Path |
 |---------------|------|
+| Coddy         | `~/.coddy/skills/mikrotik-config-gen/` |
 | Claude Code   | `~/.claude/skills/mikrotik-config-gen/` |
 | Cursor        | `~/.cursor/skills/mikrotik-config-gen/` |
 | OpenAI Codex  | `~/.codex/skills/mikrotik-config-gen/` |
 | Kimi Code CLI | `~/.kimi/skills/mikrotik-config-gen/` |
-| Coddy         | `~/.coddy/skills/mikrotik-config-gen/` |
 
 The directory name must match the `name` field in `SKILL.md`.
 
