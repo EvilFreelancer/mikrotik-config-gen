@@ -59,19 +59,38 @@ mikrotik-config-gen/
 
 ## Install
 
-**Claude Code** (single-plugin marketplace in this repo):
+The skill is distributed through the [rpa-skills](https://github.com/EvilFreelancer/rpa-skills) catalog
+and also installs as a plain skill folder.
 
+**As a plugin (Claude Code)**: add the catalog once, then install this skill from it:
+
+```text
+/plugin marketplace add EvilFreelancer/rpa-skills
+/plugin install mikrotik-config-gen@rpa-skills
 ```
-/plugin marketplace add EvilFreelancer/mikrotik-config-gen
-/plugin install mikrotik-config-gen
+
+**Codex**: `codex plugin marketplace add EvilFreelancer/rpa-skills`, then install `mikrotik-config-gen` from `/plugins`.
+
+**In Coddy**: the rpa-skills catalog is built into [Coddy](https://coddy.dev) as a system source,
+so there is nothing to connect. One sync installs this skill together with the rest of the collection
+into `~/.coddy/skills/mikrotik-config-gen/` and keeps it up to date (or press **Sync all** in Settings → Skills):
+
+```bash
+coddy skills sync
 ```
 
-**Any agent (manual):** copy this folder into the agent's skills directory
-(e.g. `~/.claude/skills/mikrotik-config-gen/`). The agent loads it from the
-`SKILL.md` frontmatter.
+**As a plain skill folder**: copy or symlink this repository into a skill root (its `SKILL.md` lives at
+the repo root):
 
-**Cursor / Codex:** point the agent at the repo; the `.cursor-plugin/` and
-`.codex-plugin/` manifests describe the same skill.
+| Tool          | Path |
+|---------------|------|
+| Claude Code   | `~/.claude/skills/mikrotik-config-gen/` |
+| Cursor        | `~/.cursor/skills/mikrotik-config-gen/` |
+| OpenAI Codex  | `~/.codex/skills/mikrotik-config-gen/` |
+| Kimi Code CLI | `~/.kimi/skills/mikrotik-config-gen/` |
+| Coddy         | `~/.coddy/skills/mikrotik-config-gen/` |
+
+The directory name must match the `name` field in `SKILL.md`.
 
 ## Usage
 
